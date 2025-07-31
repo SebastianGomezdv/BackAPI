@@ -16,11 +16,13 @@ public class Personajes {
     private  Integer cantidadDefensa;
     private String fotografia;
     private LocalDate fechaCreacion;
+    private String categoria;
+    private Boolean sigueVivo;
 
     public Personajes() {
     }
 
-    public Personajes(Integer id, String nombre, Integer cantidadVida, Integer cantidadAtaque, Integer cantidadDefensa, String fotografia, LocalDate fechaCreacion) {
+    public Personajes(Integer id, String nombre, Integer cantidadVida, Integer cantidadAtaque, Integer cantidadDefensa, String fotografia, LocalDate fechaCreacion, String categoria, Boolean sigueVivo) {
         this.id = id;
         Nombre = nombre;
         this.cantidadVida = cantidadVida;
@@ -28,7 +30,10 @@ public class Personajes {
         this.cantidadDefensa = cantidadDefensa;
         this.fotografia = fotografia;
         this.fechaCreacion = fechaCreacion;
+        this.categoria = categoria;
+        this.sigueVivo = sigueVivo;
     }
+
 
     public Integer getId() {
         return id;
@@ -84,6 +89,22 @@ public class Personajes {
 
     public void setFechaCreacion(LocalDate fechaCreacion) {
         this.fechaCreacion = fechaCreacion;
+    }
+
+    public String getCategoria() {
+        return categoria;
+    }
+
+    public void setCategoria(String categoria) {
+        this.categoria = categoria;
+    }
+
+    public Boolean getSigueVivo() {
+        return sigueVivo;
+    }
+
+    public void setSigueVivo(Boolean sigueVivo) {
+        this.sigueVivo = sigueVivo;
     }
 }
 
