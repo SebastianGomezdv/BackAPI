@@ -5,6 +5,8 @@ import com.example.APIRegistro.repositorios.IPersonajeRepositorio;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class PersonajeServicio {
 
@@ -23,4 +25,7 @@ public class PersonajeServicio {
         }
     }
 
+    public List<Personajes> obtenerTodosLosPersonajes() {
+        return repositorio.findAll();
+    }
 }
